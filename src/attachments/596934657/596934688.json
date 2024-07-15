@@ -1,0 +1,27 @@
+{
+	"id": "5d1a4d28-8273-4785-91f2-002c0f85be7f",
+	"name": "ExpediaTest",
+	"values": [
+		{
+			"key": "api_key",
+			"value": "7jccsh7fcsa4istr92ua4843b3",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "shared_secret",
+			"value": "dvo7h1kbpl6un",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "authorization",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-12-13T17:26:46.227Z",
+	"_postman_exported_using": "Postman/10.21.2-231211-1355"
+}

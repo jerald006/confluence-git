@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "1eeef6d2-e24b-483c-b1a1-faa931a1a44d",
+		"name": "RCI - XML 4.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30657544",
+		"_collection_link": "https://gold-meadow-494601.postman.co/workspace/My-Workspace~e8a995fa-1ec8-49ee-89a6-c29f677a0e3f/collection/30657544-1eeef6d2-e24b-483c-b1a1-faa931a1a44d?action=share&source=collection_link&creator=30657544"
+	},
+	"item": [
+		{
+			"name": "Search Availability",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<requestEnvelope>\r\n    <requestHeader>\r\n        <controlData>\r\n            <clientName>XMLBusinessPartnerChannel</clientName>\r\n            <userID>{{RCI_ID}}</userID>\r\n            <password>{{Password}}</password>\r\n        </controlData>\r\n        <processData>\r\n            <operationName>quickSearch</operationName>\r\n        </processData>\r\n    </requestHeader>\r\n    <SearchRequest>\r\n        <startDate>12/18/2023</startDate>\r\n        <endDate>12/31/2023</endDate>\r\n        <lengthOfStay>7</lengthOfStay>\r\n        <minUnitSize>H</minUnitSize>\r\n        <regionCode>FLOR</regionCode>\r\n    </SearchRequest>\r\n</requestEnvelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL1}}",
+					"host": [
+						"{{BaseURL1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Traveler",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=“1.0”?>\r\n<requestEnvelope>\r\n\t<requestHeader>\r\n\t\t<controlData>\r\n\t\t\t<clientName>XMLBusinessPartnerChannel</clientName>\r\n\t\t\t<userID>xmlweeksonly</userID>\r\n\t\t\t<password>xmlweeksonly</password>\r\n\t\t</controlData>\r\n\t\t<processData>\r\n\t\t\t<operationName>addTraveler</operationName>\r\n\t\t</processData>\r\n\t</requestHeader>\r\n\t<AddTravelerRequest>\r\n\t\t<reservationToken>\r\n\t\t\t<inventoryType>1</inventoryType>\r\n\t\t\t<referenceNumber>70840200100959001</referenceNumber>\r\n\t\t</reservationToken>\r\n\t\t<travelerInfo>\r\n\t\t\t<firstName>John</firstName>\r\n\t\t\t<middleName></middleName>\r\n\t\t\t<lastName>Doe</lastName>\r\n\t\t\t<addressline1><![CDATA[3rd Ave. & Main St.]]></addressline1>\r\n\t\t\t<addressline2></addressline2>\r\n\t\t\t<addressline3></addressline3>\r\n\t\t\t<city>Carmel</city>\r\n\t\t\t<state>IN</state>\r\n\t\t\t<country>USA</country>\r\n\t\t\t<zipCode>46032</zipCode>\r\n\t\t\t<homePhone>317 805-8000</homePhone>\r\n\t\t\t<workPhone>317 805-8001</workPhone>\r\n\t\t\t<email>john.doe@yahoo.com</email>\r\n\t\t</travelerInfo>\r\n\t</AddTravelerRequest>\r\n</requestEnvelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL2}}",
+					"host": [
+						"{{BaseURL2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfirmHold",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=“1.0”?>\r\n<requestEnvelope>\r\n\t<requestHeader>\r\n\t\t<controlData>\r\n\t\t\t            <clientName>XMLBusinessPartnerChannel</clientName>\r\n            <userID>{{RCI_ID}}</userID>\r\n            <password>{{Password}}</password>\r\n\t\t</controlData>\r\n\t\t<processData>\r\n\t\t\t<operationName>confirmHold</operationName>\r\n\t\t</processData>\r\n\t</requestHeader>\r\n\t<ConfirmRequest>\r\n\t\t<reservationToken>\r\n\t\t\t<inventoryType>1</inventoryType>\r\n\t\t\t<referenceNumber>70840200100958001</referenceNumber>\r\n\t\t</reservationToken>\r\n\t</ConfirmRequest>\r\n</requestEnvelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL2}}",
+					"host": [
+						"{{BaseURL2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=“1.0”?>\r\n<requestEnvelope>\r\n    <requestHeader>\r\n        <controlData>\r\n            <clientName>XMLBusinessPartnerChannel</clientName>\r\n            <userID>{{RCI_ID}}</userID>\r\n            <password>{{Password}}</password>\r\n        </controlData>\r\n        <processData>\r\n            <operationName>confirm</operationName>\r\n        </processData>\r\n    </requestHeader>\r\n    <ReservationRequest>\r\n        <sessionToken>\r\n            <sessionId>093216580</sessionId>\r\n        </sessionToken>\r\n        <accommodationItem>\r\n            <resortId>AA99</resortId>\r\n            <resortName>\r\n                <![CDATA[AA99-ALPHA&BETA RESORT TEST]]>\r\n            </resortName>\r\n            <nbrOfBedrooms>3</nbrOfBedrooms>\r\n            <bookingInfo>\r\n                <systemId>\r\n                    <inventoryType>1</inventoryType>\r\n                    <inventoryId>59Lm6yhPndq30a7fDEseVFB4C5WkN+Wgvz/XmWm6+3C3tgDBlla1jxRm9H1VnyAQ</inventoryId>\r\n                </systemId>\r\n                <checkInDate>10/07/2006</checkInDate>\r\n                <checkOutDate>10/14/2006</checkOutDate>\r\n                <charge>\r\n                    <value>249.99</value>\r\n                    <currency>USD</currency>\r\n                </charge>\r\n            </bookingInfo>\r\n        </accommodationItem>\r\n    </ReservationRequest>\r\n</requestEnvelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL2}}",
+					"host": [
+						"{{BaseURL2}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL1",
+			"value": "https://testb2ba.rci.com/variableduration/gateway",
+			"type": "string"
+		},
+		{
+			"key": "BaseURL2",
+			"value": "https://testb2bb.rci.com/variableduration/gateway",
+			"type": "string"
+		},
+		{
+			"key": "RCI_ID",
+			"value": "xmlweeksonly",
+			"type": "string"
+		},
+		{
+			"key": "Password",
+			"value": "xmlweeksonly",
+			"type": "string"
+		}
+	]
+}

@@ -25,6 +25,10 @@ const BRDUsersSessionControl = React.lazy(() => import('./views/base/BRD-Users-S
 const DelrayIntegration = React.lazy(() => import('./views/base/delray-integration/DelrayIntegration'))
 const BRDelrayIntegration = React.lazy(() => import('./views/base/BRD-delray-integration/BRDelrayIntegration'))
 const SignUpLoginScenarios = React.lazy(() => import('./views/base/signup-login-scenarios/SignUpLoginScenarios'))
+const ExpediaIntegration = React.lazy(() => import('./views/base/expedia-integration/ExpediaIntegration'))
+const ExpediaContentProperty = React.lazy(() => import('./views/base/expedia-integration-content-property/ExpediaContentProperty'))
+const ExpediaIntegrationAvailability = React.lazy(() => import('./views/base/expedia-integration-availability/ExpediaIntegrationAvailability'))
+const ExpediaIntegrationBooking = React.lazy(() => import('./views/base/expedia-integration-booking/ExpediaIntegrationBooking'))
 const Navs = React.lazy(() => import('./views/base/navs/Navs'))
 const Paginations = React.lazy(() => import('./views/base/paginations/Paginations'))
 const Placeholders = React.lazy(() => import('./views/base/placeholders/Placeholders'))
@@ -92,6 +96,10 @@ const routes = [
   { path: '/base/delray-integration', name: 'Delray Integration', element: DelrayIntegration},
   { path: '/base/BRD-delray-integration', name: 'BRD Delray Integration', element: BRDelrayIntegration},
   { path: '/base/signup-login-scenarios', name: 'Sign Up And Login Scenarios', element: SignUpLoginScenarios},
+  { path: '/base/expedia-integration', name: 'Expedia Integration', element: ExpediaIntegration},
+  { path: '/base/expedia-integration-content-property', name: 'Expedia Integration Content Property', element: ExpediaContentProperty},
+  { path: '/base/expedia-integration-availability', name: 'Expedia Integration Availability', element: ExpediaIntegrationAvailability},
+  { path: '/base/expedia-integration-booking', name: 'Expedia Integration Booking', element: ExpediaIntegrationBooking},
   { path: '/base/navs', name: 'Navs', element: Navs },
   { path: '/base/paginations', name: 'Paginations', element: Paginations },
   { path: '/base/placeholders', name: 'Placeholders', element: Placeholders },

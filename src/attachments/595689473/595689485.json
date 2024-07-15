@@ -1,0 +1,2253 @@
+{
+	"info": {
+		"_postman_id": "8807b5ed-88e2-44a9-832e-a5f1216cebd2",
+		"name": "EPS Rapid v3",
+		"description": "Postman collection for EPS Rapid v3, for full documentation please see https://developers.expediagroup.com/docs/rapid/setup/getting-started",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30657544",
+		"_collection_link": "https://gold-meadow-494601.postman.co/workspace/My-Workspace~e8a995fa-1ec8-49ee-89a6-c29f677a0e3f/collection/30657544-8807b5ed-88e2-44a9-832e-a5f1216cebd2?action=share&source=collection_link&creator=30657544"
+	},
+	"item": [
+		{
+			"name": "Geography",
+			"item": [
+				{
+					"name": "Region",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/regions/:region_id?language=en-US&include=details",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"regions",
+								":region_id"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "en-US"
+								},
+								{
+									"key": "include",
+									"value": "details"
+								},
+								{
+									"key": "include",
+									"value": "property_ids",
+									"disabled": true
+								},
+								{
+									"key": "include",
+									"value": "property_ids_expanded",
+									"disabled": true
+								},
+								{
+									"key": "supply_source",
+									"value": "expedia",
+									"disabled": true
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "region_id",
+									"value": "178248"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Pagination link is present\", function() {",
+									"    pm.response.to.have.header(\"Link\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/regions?include=details&language=en-US&iata_location_code=NYC&supply_source=expedia",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"regions"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "details"
+								},
+								{
+									"key": "include",
+									"value": "property_ids",
+									"disabled": true
+								},
+								{
+									"key": "include",
+									"value": "property_ids_expanded",
+									"disabled": true
+								},
+								{
+									"key": "language",
+									"value": "en-US"
+								},
+								{
+									"key": "ancestor_id",
+									"value": "602962",
+									"disabled": true
+								},
+								{
+									"key": "area",
+									"value": "3,602962",
+									"disabled": true
+								},
+								{
+									"key": "country_code",
+									"value": "US",
+									"disabled": true
+								},
+								{
+									"key": "country_subdivision_code",
+									"value": "US-MO",
+									"disabled": true
+								},
+								{
+									"key": "iata_location_code",
+									"value": "NYC"
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "supply_source",
+									"value": "expedia"
+								},
+								{
+									"key": "type",
+									"value": "country",
+									"disabled": true
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Polygon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\":\"Polygon\",\"coordinates\":[[[-122.2414,47.6115],[-122.202,47.5588],[-122.1395,47.5516],[-122.1487,47.6364],[-122.2414,47.6115]]]}"
+						},
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/properties/geography?include=property_ids&supply_source=expedia",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"properties",
+								"geography"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "property_ids"
+								},
+								{
+									"key": "supply_source",
+									"value": "expedia"
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Content",
+			"item": [
+				{
+					"name": "Property Content",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/properties/content?language=en-US&supply_source=expedia&include=property_ids&property_id=11775754",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"properties",
+								"content"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "en-US"
+								},
+								{
+									"key": "supply_source",
+									"value": "expedia"
+								},
+								{
+									"key": "brand_id",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "business_model",
+									"value": "property_collect",
+									"disabled": true
+								},
+								{
+									"key": "category_id_exclude",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "chain_id",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "country_code",
+									"value": "US",
+									"disabled": true
+								},
+								{
+									"key": "date_added_end",
+									"value": "2023-07-01",
+									"disabled": true
+								},
+								{
+									"key": "date_added_start",
+									"value": "2023-06-01",
+									"disabled": true
+								},
+								{
+									"key": "date_updated_end",
+									"value": "2023-07-02",
+									"disabled": true
+								},
+								{
+									"key": "date_updated_start",
+									"value": "2023-07-01",
+									"disabled": true
+								},
+								{
+									"key": "include",
+									"value": "property_ids"
+								},
+								{
+									"key": "multi_unit",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "property_id",
+									"value": "11775754"
+								},
+								{
+									"key": "property_rating_max",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "property_rating_min",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inactive Properties",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/properties/inactive?since=2023-07-12",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"properties",
+								"inactive"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "2023-07-12"
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guest Reviews",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/properties/:property_id/guest-reviews?language=en-US",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"properties",
+								":property_id",
+								"guest-reviews"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "en-US"
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "property_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Property Catalog File",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/files/properties/catalog?language=en-US&supply_source=expedia",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"files",
+								"properties",
+								"catalog"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "en-US"
+								},
+								{
+									"key": "supply_source",
+									"value": "expedia"
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Property Content File",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/files/properties/content?language=en-US&supply_source=expedia",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"files",
+								"properties",
+								"content"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "en-US"
+								},
+								{
+									"key": "supply_source",
+									"value": "expedia"
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chains",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/chains",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"chains"
+							],
+							"query": [
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shop",
+			"item": [
+				{
+					"name": "Availability",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"value": "standard",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/properties/availability?checkin={{checkin}}&checkout={{checkout}}&country_code=US&currency=USD&language=en-US&occupancy=1&rate_plan_count=1&sales_channel=website&sales_environment=hotel_only",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"properties",
+								"availability"
+							],
+							"query": [
+								{
+									"key": "checkin",
+									"value": "{{checkin}}"
+								},
+								{
+									"key": "checkout",
+									"value": "{{checkout}}"
+								},
+								{
+									"key": "country_code",
+									"value": "US"
+								},
+								{
+									"key": "currency",
+									"value": "USD"
+								},
+								{
+									"key": "language",
+									"value": "en-US"
+								},
+								{
+									"key": "occupancy",
+									"value": "1"
+								},
+								{
+									"key": "property_id",
+									"value": "11775754",
+									"disabled": true
+								},
+								{
+									"key": "rate_plan_count",
+									"value": "1"
+								},
+								{
+									"key": "sales_channel",
+									"value": "website"
+								},
+								{
+									"key": "sales_environment",
+									"value": "hotel_only"
+								},
+								{
+									"key": "exclusion",
+									"value": "refundable_damage_deposit",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "expedia_collect",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "refundable",
+									"disabled": true
+								},
+								{
+									"key": "rate_option",
+									"value": "net_rates",
+									"disabled": true
+								},
+								{
+									"key": "billing_terms",
+									"value": "{{billing_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "payment_terms",
+									"value": "{{payment_terms}}",
+									"disabled": true
+								},
+								{
+									"key": "partner_point_of_sale",
+									"value": "{{partner_point_of_sale}}",
+									"disabled": true
+								},
+								{
+									"key": "platform_name",
+									"value": "{{platform_name}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Additional Rates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{additional_rates_link}}?token={{additional_rates_token}}",
+							"host": [
+								"{{eanapi_url}}{{additional_rates_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{additional_rates_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shop For Change",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"value": "standard",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{shop_for_change_link}}?token={{shop_for_change_token}}&sales_channel=website&sales_environment=hotel_only",
+							"host": [
+								"{{eanapi_url}}{{shop_for_change_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{shop_for_change_token}}"
+								},
+								{
+									"key": "checkin",
+									"value": "{{change_checkin}}",
+									"disabled": true
+								},
+								{
+									"key": "checkout",
+									"value": "{{change_checkout}}",
+									"disabled": true
+								},
+								{
+									"key": "occupancy",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sales_channel",
+									"value": "website"
+								},
+								{
+									"key": "sales_environment",
+									"value": "hotel_only"
+								},
+								{
+									"key": "exclusion",
+									"value": "refundable_damage_deposit",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "refundable",
+									"disabled": true
+								},
+								{
+									"key": "rate_option",
+									"value": "member",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Price Check",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"value": "hard_change",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{price_check_link}}?token={{price_check_token}}",
+							"host": [
+								"{{eanapi_url}}{{price_check_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{price_check_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payment Options",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{payment_options_link}}?token={{payment_options_token}}",
+							"host": [
+								"{{eanapi_url}}{{payment_options_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{payment_options_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Availability Calendar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"value": "standard",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/calendars/availability?property_id=45333213&start_date={{checkin}}&end_date={{checkout}}",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"calendars",
+								"availability"
+							],
+							"query": [
+								{
+									"key": "property_id",
+									"value": "45333213"
+								},
+								{
+									"key": "start_date",
+									"value": "{{checkin}}"
+								},
+								{
+									"key": "end_date",
+									"value": "{{checkout}}"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-01-01",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-01-31",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Itineraries (create)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var timestamp = Math.floor(new Date().getTime()/1000).toString();",
+									"pm.collectionVariables.set('affiliate_reference_id', \"RAPID_POSTMAN_\" + timestamp);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Test",
+								"value": "standard",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"affiliate_reference_id\": \"{{affiliate_reference_id}}\",\n    \"hold\": false,\n    \"email\": \"{{booking_email}}\",\n    \"phone\": {\n        \"country_code\": \"1\",\n        \"area_code\": \"487\",\n        \"number\": \"5550077\"\n    },\n    \"rooms\": [\n        {\n            \"given_name\": \"John\",\n            \"family_name\": \"Smith\",\n            \"smoking\": false,\n            \"special_request\": \"Top floor or away from street please\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"type\": \"customer_card\",\n            \"number\": \"4111111111111111\",\n            \"security_code\": \"123\",\n            \"expiration_month\": \"08\",\n            \"expiration_year\": \"2025\",\n            \"billing_contact\": {\n                \"given_name\": \"John\",\n                \"family_name\": \"Smith\",\n                \"address\": {\n                    \"line_1\": \"555 1st St\",\n                    \"line_2\": \"10th Floor\",\n                    \"line_3\": \"Unit 12\",\n                    \"city\": \"Seattle\",\n                    \"state_province_code\": \"WA\",\n                    \"postal_code\": \"98121\",\n                    \"country_code\": \"US\"\n                }\n            },\n            \"enrollment_date\": \"2018-09-15\"\n        }\n    ],\n    \"affiliate_metadata\": \"data_point_1:123|data_point2:This is data.\",\n    \"tax_registration_number\": \"12345678910\",\n    \"traveler_handling_instructions\": \"Please use the card provided for payment. Avoid cancelation as this is for a corporate traveler. Contact traveler if any issues.\"\n}"
+						},
+						"url": {
+							"raw": "{{eanapi_url}}{{book_link}}?token={{book_token}}",
+							"host": [
+								"{{eanapi_url}}{{book_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{book_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Itinerary (resume)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"type": "text",
+								"value": "standard"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{resume_link}}?token={{resume_token}}",
+							"host": [
+								"{{eanapi_url}}{{resume_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{resume_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Itinerary (complete_payment_session)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"type": "text",
+								"value": "standard"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{complete_payment_session_link}}?token={{complete_payment_session_token}}",
+							"host": [
+								"{{eanapi_url}}{{complete_payment_session_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{complete_payment_session_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Manage Booking",
+			"item": [
+				{
+					"name": "Itineraries (retrieve with ref)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"type": "text",
+								"value": "standard",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}/{{rapid_version}}/itineraries?affiliate_reference_id={{affiliate_reference_id}}&email={{booking_email}}",
+							"host": [
+								"{{eanapi_url}}"
+							],
+							"path": [
+								"{{rapid_version}}",
+								"itineraries"
+							],
+							"query": [
+								{
+									"key": "affiliate_reference_id",
+									"value": "{{affiliate_reference_id}}"
+								},
+								{
+									"key": "email",
+									"value": "{{booking_email}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Itinerary (retrieve)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"type": "text",
+								"value": "standard"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{retrieve_link}}?token={{retrieve_token}}",
+							"host": [
+								"{{eanapi_url}}{{retrieve_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{retrieve_token}}"
+								},
+								{
+									"key": "include",
+									"value": "history",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room (change details)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Test",
+								"type": "text",
+								"value": "standard"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"given_name\": \"John\",\n  \"family_name\": \"Smith\",\n  \"smoking\": false,\n  \"special_request\": \"Top floor or away from street please, and a view of the sea. Also a view of the mountains. As well as a view of the park. And a view of the lake. Air conditioning is a must, and I need you to look after my dog, cat and horse. Would like to park my plane on the roof as well.\"\n}"
+						},
+						"url": {
+							"raw": "{{eanapi_url}}{{change_room_link}}?token={{change_room_token}}",
+							"host": [
+								"{{eanapi_url}}{{change_room_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{change_room_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Commit Pricing (hard change)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Test",
+								"type": "text",
+								"value": "standard"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"change_reference_id\": \"testing-change-1\",\n    \"payments\": [\n        {\n            \"type\": \"customer_card\",\n            \"number\": \"4111111111111111\",\n            \"security_code\": \"123\",\n            \"expiration_month\": \"08\",\n            \"expiration_year\": \"2025\",\n            \"billing_contact\": {\n                \"given_name\": \"John\",\n                \"family_name\": \"Smith\",\n                \"address\": {\n                    \"line_1\": \"555 1st St\",\n                    \"line_2\": \"10th Floor\",\n                    \"line_3\": \"Unit 12\",\n                    \"city\": \"Seattle\",\n                    \"state_province_code\": \"WA\",\n                    \"postal_code\": \"98121\",\n                    \"country_code\": \"US\"\n                }\n            },\n            \"enrollment_date\": \"2018-09-15\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{eanapi_url}}{{hard_change_link}}?token={{hard_change_token}}",
+							"host": [
+								"{{eanapi_url}}{{hard_change_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{hard_change_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Itinerary (cancel)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"type": "text",
+								"value": "standard"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{cancel_link}}?token={{cancel_token}}",
+							"host": [
+								"{{eanapi_url}}{{cancel_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{cancel_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room (cancel)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							},
+							{
+								"key": "Test",
+								"type": "text",
+								"value": "standard"
+							}
+						],
+						"url": {
+							"raw": "{{eanapi_url}}{{cancel_room_link}}?token={{cancel_room_token}}",
+							"host": [
+								"{{eanapi_url}}{{cancel_room_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{cancel_room_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reference",
+			"item": [
+				{
+					"name": "Pagination",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "Customer-Ip",
+								"value": "5.5.5.5"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip"
+							}
+						],
+						"url": {
+							"raw": "{{pagination_link}}?token={{pagination_token}}",
+							"host": [
+								"{{pagination_link}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{pagination_token}}"
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						},
+						"description": "This pagination request works with any collection that supports pagination."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// check preconditions",
+					"if (!pm.variables.get('api_key') || !pm.variables.get('shared_secret')) {",
+					"    throw Error('The api_key or shared_secret environment variables have not been set');",
+					"}",
+					"pm.request.headers.remove(\"User-Agent\");",
+					"pm.request.headers.add(\"EPS Rapid Postman Collection - 2023-07-12\", \"User-Agent\");",
+					"",
+					"// setup authorization, checkin and checkout dates",
+					"pm.variables.set('authorization', getAuthorizationKey());",
+					"pm.variables.set('checkin', getIsoDate(30));",
+					"pm.variables.set('checkout', getIsoDate(32));",
+					"pm.variables.set('change_checkin', getIsoDate(31));",
+					"pm.variables.set('change_checkout', getIsoDate(33));",
+					"pm.variables.set('arrival', getIsoTime(30));",
+					"",
+					"function getAuthorizationKey() {",
+					"    var timestamp =  Math.floor(new Date().getTime()/1000).toString();",
+					"    return 'EAN apikey=' + pm.variables.get('api_key') ",
+					"        + ',signature=' + getSigSHA512(timestamp)",
+					"        + ',timestamp=' + timestamp;    ",
+					"}",
+					"",
+					"function getSigSHA512(current_timestamp) {",
+					"    var sig = pm.variables.get('api_key') ",
+					"        + pm.variables.get('shared_secret') + current_timestamp;",
+					"    return CryptoJS.SHA512(sig).toString();",
+					"}",
+					"",
+					"function getIsoTime(days_from_today) {",
+					"    var MS_PER_DAY = 24 * 60 * 60 * 1000;",
+					"    var date = new Date(new Date().getTime() + days_from_today * MS_PER_DAY);",
+					"    return date.toISOString();",
+					"}",
+					"",
+					"function getIsoDate(days_from_today) {",
+					"    var date = new Date(getIsoTime(days_from_today))",
+					"    return date.getFullYear() + '-' + pad(date.getMonth()+1) + '-' + pad(date.getDate());",
+					"}",
+					"",
+					"function pad(number) {",
+					"    var r = String(number);",
+					"    if ( r.length === 1 ) {",
+					"        r = '0' + r;",
+					"    }",
+					"    return r;",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test('Status code is 2xx', function () {",
+					"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202, 204]);",
+					"});",
+					"",
+					"pm.test('Requested version matches collection version', function() {",
+					"    var expected_version = '/' + pm.variables.get('rapid_version') + '/';",
+					"    pm.expect(request.url).to.include(expected_version);",
+					"})",
+					"",
+					"function setLinkAndToken(linkVarNamePrefix, rawLink) {",
+					"    pm.collectionVariables.set(linkVarNamePrefix + '_link', rawLink.substring(0, rawLink.indexOf('?')));",
+					"    pm.collectionVariables.set(linkVarNamePrefix + '_token', rawLink.substring(rawLink.indexOf('token=') + 6));",
+					"    console.log(linkVarNamePrefix + ' link and token set');",
+					"}",
+					"",
+					"if (responseBody) {",
+					"    var response = JSON.parse(responseBody);",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('price_check', Object.values(response[0].rooms[0].rates[0].bed_groups)[0].links.price_check.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('additional_rates', response[0].links.additional_rates.href);",
+					"    } catch(err) {}",
+					"",
+					"    try {",
+					"        setLinkAndToken('payment_options', response[0].rooms[0].rates[0].links.payment_options.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('book', response.links.book.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('retrieve', response.links.retrieve.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('resume', response.links.resume.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('cancel', response.links.cancel.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('cancel_room', response[0].rooms[0].links.cancel.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('change_room', response[0].rooms[0].links.change.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('shop_for_change', response[0].rooms[0].links.shop_for_change.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('cancel_room', response.rooms[0].links.cancel.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('change_room', response.rooms[0].links.change.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('shop_for_change', response.rooms[0].links.shop_for_change.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('hard_change', response.links.commit.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        setLinkAndToken('complete_payment_session', response.links.complete_payment_session.href);",
+					"    } catch(err) {}",
+					"    ",
+					"    try {",
+					"        var linkHeader = postman.getResponseHeader('Link');",
+					"        setLinkAndToken('pagination', linkHeader.substring(1, linkHeader.indexOf('>')));",
+					"    } catch(err) {}",
+					"}"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "rapid_version",
+			"value": "v3"
+		},
+		{
+			"key": "eanapi_url",
+			"value": "https://test.ean.com"
+		},
+		{
+			"key": "booking_email",
+			"value": "john@example.com"
+		},
+		{
+			"key": "additional_rates_link",
+			"value": "/1"
+		},
+		{
+			"key": "additional_rates_token",
+			"value": ""
+		},
+		{
+			"key": "price_check_link",
+			"value": "/1"
+		},
+		{
+			"key": "price_check_token",
+			"value": ""
+		},
+		{
+			"key": "payment_options_link",
+			"value": "/1"
+		},
+		{
+			"key": "payment_options_token",
+			"value": ""
+		},
+		{
+			"key": "book_link",
+			"value": "/1"
+		},
+		{
+			"key": "book_token",
+			"value": ""
+		},
+		{
+			"key": "retrieve_link",
+			"value": "/1"
+		},
+		{
+			"key": "retrieve_token",
+			"value": ""
+		},
+		{
+			"key": "resume_link",
+			"value": "/1"
+		},
+		{
+			"key": "resume_token",
+			"value": ""
+		},
+		{
+			"key": "cancel_link",
+			"value": "/1"
+		},
+		{
+			"key": "cancel_token",
+			"value": ""
+		},
+		{
+			"key": "cancel_room_link",
+			"value": "/1"
+		},
+		{
+			"key": "cancel_room_token",
+			"value": ""
+		},
+		{
+			"key": "change_room_link",
+			"value": "/1"
+		},
+		{
+			"key": "change_room_token",
+			"value": ""
+		},
+		{
+			"key": "complete_payment_session_link",
+			"value": "/1"
+		},
+		{
+			"key": "complete_payment_session_token",
+			"value": ""
+		},
+		{
+			"key": "pagination_link",
+			"value": "/1"
+		},
+		{
+			"key": "pagination_token",
+			"value": ""
+		},
+		{
+			"key": "shop_for_change_link",
+			"value": "/1"
+		},
+		{
+			"key": "shop_for_change_token",
+			"value": ""
+		},
+		{
+			"key": "hard_change_link",
+			"value": "/1"
+		},
+		{
+			"key": "hard_change_token",
+			"value": ""
+		},
+		{
+			"key": "affiliate_reference_id",
+			"value": ""
+		}
+	]
+}
