@@ -55,6 +55,15 @@ const FRDFrontEndPresentation = React.lazy(() => import('./views/base/FRD-front-
 const FRDCruisesIntegrationBooking = React.lazy(() => import('./views/base/FRD-cruises-integration-booking/FRDCruisesIntegrationBooking'))
 const CruisePocMeetingNotes = React.lazy(() => import('./views/base/cruise-poc-meeting-notes/CruisePocMeetingNotes'))
 const CruiseData = React.lazy(() => import('./views/base/cruise-data/CruiseData'))
+const CruisesPocReviewPlanning = React.lazy(() => import('./views/base/cruises-poc-review-planning/CruisesPocReviewPlanning'))
+const CruisesDemoMeetingNotes = React.lazy(() => import('./views/base/cruises-demo-meeting-notes/CruisesDemoMeetingNotes'))
+const CruisesLineAgreements = React.lazy(() => import('./views/base/cruises-line-agreements/CruisesLineAgreements'))
+const HotDeals = React.lazy(() => import('./views/base/hot-deals/HotDeals'))
+const RCIIntegration = React.lazy(() => import('./views/base/RCI-Integration/RCIIntegration'))
+const BRDRciIntegration = React.lazy(() => import('./views/base/BRD-RCI-Integration/BRDRciIntegration'))
+const FRDRciIntegrationStaticData = React.lazy(() => import('./views/base/FRD-RCI-Integration-static-data/FRDRciIntegrationStaticData'))
+const FRDRciIntegrationAvailabilityShopping = React.lazy(() => import('./views/base/FRD-RCI-Integration-availability-shopping/FRDRciIntegrationAvailabilityShopping'))
+const FRDRciIntegrationBookingCheckout = React.lazy(() => import('./views/base/FRD-RCI-Integration-booking-checkout/FRDRciIntegrationBookingCheckout'))
 const Navs = React.lazy(() => import('./views/base/navs/Navs'))
 const Paginations = React.lazy(() => import('./views/base/paginations/Paginations'))
 const Placeholders = React.lazy(() => import('./views/base/placeholders/Placeholders'))
@@ -152,6 +161,15 @@ const routes = [
   { path: '/base/FRD-cruises-integration-booking', name: 'FRD Cruises Integration Booking', element: FRDCruisesIntegrationBooking },
   { path: '/base/cruise-poc-meeting-notes', name: 'Cruise Poc Meeting Notes', element: CruisePocMeetingNotes },
   { path: '/base/cruise-data', name: 'Cruise Data', element: CruiseData },
+  { path: '/base/cruises-poc-review-planning', name: 'Cruises Poc Review Planning', element: CruisesPocReviewPlanning },
+  { path: '/base/cruises-demo-meeting-notes', name: 'Cruises Demo Meeting Notes', element: CruisesDemoMeetingNotes },
+  { path: '/base/cruises-line-agreements', name: 'Cruises Line Agreements', element: CruisesLineAgreements },
+  { path: '/base/hot-deals', name: 'Hot Deals', element: HotDeals },
+  { path: '/base/RCI-Integration', name: 'RCI Integration', element: RCIIntegration },
+  { path: '/base/BRD-RCI-integration', name: 'BRD RCI Integration', element: BRDRciIntegration },
+  { path: '/base/FRD-RCI-integration-static-data', name: 'FRD RCI Integration Static Data', element: FRDRciIntegrationStaticData },
+  { path: '/base/FRD-RCI-integration-availability-shopping', name: 'FRD RCI Integration Availability Shopping', element: FRDRciIntegrationAvailabilityShopping },
+  { path: '/base/FRD-RCI-integration-booking-checkout', name: 'FRD RCI Integration Booking Checkout', element: FRDRciIntegrationBookingCheckout },
   { path: '/base/navs', name: 'Navs', element: Navs },
   { path: '/base/paginations', name: 'Paginations', element: Paginations },
   { path: '/base/placeholders', name: 'Placeholders', element: Placeholders },
