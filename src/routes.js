@@ -20,6 +20,11 @@ const FrequentTraveler = React.lazy(() => import('./views/base/Frequent-Traveler
 const FRDFrequent = React.lazy(() => import('./views/base/FRD-Frequent/FRDFrequent'))
 const PrivateFares = React.lazy(() => import('./views/base/private-fares/PrivateFares'))
 const TrackingPlanDraft = React.lazy(() => import('./views/base/tracking-plan-draft/TrackingPlanDraft'))
+const UsersSessionControl = React.lazy(() => import('./views/base/users-session-control/UsersSessionControl'))
+const BRDUsersSessionControl = React.lazy(() => import('./views/base/BRD-Users-Session-Control/BRDUsersSessionControl'))
+const DelrayIntegration = React.lazy(() => import('./views/base/delray-integration/DelrayIntegration'))
+const BRDelrayIntegration = React.lazy(() => import('./views/base/BRD-delray-integration/BRDelrayIntegration'))
+const SignUpLoginScenarios = React.lazy(() => import('./views/base/signup-login-scenarios/SignUpLoginScenarios'))
 const Navs = React.lazy(() => import('./views/base/navs/Navs'))
 const Paginations = React.lazy(() => import('./views/base/paginations/Paginations'))
 const Placeholders = React.lazy(() => import('./views/base/placeholders/Placeholders'))
@@ -82,6 +87,11 @@ const routes = [
   { path: '/base/FRD-Frequent', name: 'FRD Frequent', element: FRDFrequent},  
   { path: '/base/Private-Fares', name: 'Private Fares', element: PrivateFares},
   { path: '/base/Tracking-Plan-Draft', name: 'Tracking Plan', element: TrackingPlanDraft},
+  { path: '/base/Users-Session-Control', name: 'Users Session Control', element: UsersSessionControl},
+  { path: '/base/BRD-Users-Session-Control', name: 'BRD Users Session Control', element: BRDUsersSessionControl},
+  { path: '/base/delray-integration', name: 'Delray Integration', element: DelrayIntegration},
+  { path: '/base/BRD-delray-integration', name: 'BRD Delray Integration', element: BRDelrayIntegration},
+  { path: '/base/signup-login-scenarios', name: 'Sign Up And Login Scenarios', element: SignUpLoginScenarios},
   { path: '/base/navs', name: 'Navs', element: Navs },
   { path: '/base/paginations', name: 'Paginations', element: Paginations },
   { path: '/base/placeholders', name: 'Placeholders', element: Placeholders },

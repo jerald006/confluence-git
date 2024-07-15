@@ -193,6 +193,47 @@ const _nav = [
         to: '/base/tracking-plan-draft',
       },
       {
+        component: CNavGroup,
+        name: 'Users Session Control',
+        to: '/base/Users-Session-Control',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Users Session Control',
+            to: '/base/users-session-control',
+          },
+          {
+            component: CNavItem,
+            name: 'BRD - Users session Control',
+            to: '/base/BRD-Users-Sesion-Control',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Delray integration',
+        to: '/base/delray-integration',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Delray integration',
+            to: '/base/delray-integration',
+          },
+          {
+            component: CNavItem,
+            name: 'BRD - Delray integration - 2023-12-05',
+            to: '/base/BRD-delray-integration',
+          },
+          {
+            component: CNavItem,
+            name: 'Sign up and Login scenarios (Testing cases)',
+            to: '/base/signup-login-scenarios',
+          },
+        ],
+      },
+      {
         component: CNavItem,
         name: 'Navs & Tabs',
         to: '/base/navs',
