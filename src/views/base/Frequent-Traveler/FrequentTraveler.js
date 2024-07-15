@@ -1,0 +1,124 @@
+import React from 'react'
+
+function FrequentTraveler() {
+  return (
+    <>
+      <title>XeniApp : Frequent Traveler Inclusions</title>
+      <link rel="stylesheet" href="styles/site.css" type="text/css" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+      <div id="page">
+        <div id="main" className="aui-page-panel">
+          <div id="main-header">
+            <div id="breadcrumb-section">
+              <ol id="breadcrumbs">
+                <li className="first">
+                  <span>
+                    <a href="index.html">XeniApp</a>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <a href="XeniApp_542179373.html">XeniApp</a>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <a href="Projects_583761921.html">Projects</a>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <a href="Passenger-Additional-Information._585728037.html">
+                      Passenger Additional Information.
+                    </a>
+                  </span>
+                </li>
+              </ol>
+            </div>
+            <h1 id="title-heading" className="pagetitle">
+              <span id="title-text">XeniApp : Frequent Traveler Inclusions</span>
+            </h1>
+          </div>
+          <div id="content" className="view">
+            <div className="page-metadata">
+              Created by <span className="author"> Gerardo Nizetich</span>, last modified on Jan 25,
+              2024
+            </div>
+            <div id="main-content" className="wiki-content group">
+              <hr />
+              <h1 id="FrequentTravelerInclusions-Objective">Objective</h1>
+              <p>
+                As part of the effort to enhance the experience of the Flight Product, the
+                additional passenger information section is required to allow consumers to enter
+                their frequent Traveler IDs, which will directly impact the Seat map selection and
+                Ancillaries due to the flight industry standard.{' '}
+              </p>
+              <p />
+              <p>We need to collect:</p>
+              <ol start={1}>
+                <li>
+                  <p>Frequent Traveler program</p>
+                </li>
+                <li>
+                  <p>Frequent Traveler ID</p>
+                </li>
+                <li>
+                  <p>Tier level</p>
+                </li>
+              </ol>
+              <hr />
+              <p></p>
+              <div className="plugin_pagetree">
+                <ul className="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace">
+                  <div className="plugin_pagetree_children"></div>
+                </ul>
+                <fieldset className="hidden">
+                  <input type="hidden" name="treeId" defaultValue="" />
+                  <input
+                    type="hidden"
+                    name="treeRequestId"
+                    defaultValue="/wiki/plugins/pagetree/naturalchildren.action?decorator=none&excerpt=false&sort=position&reverse=false&disableLinks=false&expandCurrent=false"
+                  />
+                  <input type="hidden" name="treePageId" defaultValue={600834058} />
+                  <input type="hidden" name="noRoot" defaultValue="false" />
+                  <input type="hidden" name="rootPageId" defaultValue={600834058} />
+                  <input type="hidden" name="rootPage" defaultValue="" />
+                  <input type="hidden" name="startDepth" defaultValue={1} />
+                  <input type="hidden" name="spaceKey" defaultValue="XENIAPP" />
+                  <input type="hidden" name="i18n-pagetree.loading" defaultValue="Loading..." />
+                  <input
+                    type="hidden"
+                    name="i18n-pagetree.error.permission"
+                    defaultValue="Unable to load page tree. It seems that you do not have permission to view the root page."
+                  />
+                  <input
+                    type="hidden"
+                    name="i18n-pagetree.eeror.general"
+                    defaultValue="There was a problem retrieving the page tree. Please check the server log file for more information."
+                  />
+                  <input type="hidden" name="loginUrl" defaultValue="" />
+                  <input type="hidden" name="mobile" defaultValue="false" />
+                  <fieldset className="hidden">
+                    <input type="hidden" name="ancestorId" defaultValue={600834058} />
+                  </fieldset>
+                </fieldset>
+              </div>
+              <p />
+              <p></p>
+            </div>
+          </div>{' '}
+        </div>
+        <div id="footer" role="contentinfo">
+          <section className="footer-body">
+            <p>Document generated by Confluence on Jun 24, 2024 05:24</p>
+            <div id="footer-logo">
+              <a href="http://www.atlassian.com/">Atlassian</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default FrequentTraveler

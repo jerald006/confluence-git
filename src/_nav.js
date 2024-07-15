@@ -132,6 +132,67 @@ const _nav = [
         ],
       },
       {
+        component: CNavGroup,
+        name: 'Passenger Additional Information',
+        to: '/base/Passenger Additional Information',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'BRD - Standard Travel Documentaion - 2023-11-16',
+            to: '/base/BRD-Standard',
+          },
+          {
+            component: CNavGroup,
+            name: 'FOID inclusion',
+            to: '/base/FOID--Inclusions',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon"/>,
+            items: [
+              {
+                component: CNavItem,
+                name: 'FOID Inclusion',
+                to: '/base/FOID-Inclusions',
+              },
+              {
+                component: CNavItem,
+                name: 'FRD - FOID Inclusion - MVP1',
+                to: '/base/FOID-Inclusion',
+              },
+              
+            ],
+          },
+          {
+            component: CNavGroup,
+            name: 'Frequent Traveler Inclusions',
+            to: '/base/Frequent Traveler Inclusions',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon"/>,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Frequent Traveler Inclusions',
+                to: '/base/Frequent-Traveler',
+              },
+              {
+                component: CNavItem,
+                name: 'FRD - Frequent Traveler Inclusion - MVP1',
+                to: '/base/FRD-Frequent',
+              },
+              
+            ],
+          }
+        ],
+      },
+      {
+        component: CNavItem,
+        name: 'Private Fares',
+        to: '/base/private-fares',
+      },
+      {
+        component: CNavItem,
+        name: 'Tracking plan_draft',
+        to: '/base/tracking-plan-draft',
+      },
+      {
         component: CNavItem,
         name: 'Navs & Tabs',
         to: '/base/navs',

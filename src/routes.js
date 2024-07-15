@@ -13,6 +13,13 @@ const Collapses = React.lazy(() => import('./views/base/collapses/Collapses'))
 const ListGroups = React.lazy(() => import('./views/base/list-groups/ListGroups'))
 const FRDSeatMap = React.lazy(() => import('./views/base/FRD-seatmap/FRDSeatMap'))
 const BRDAncillaries = React.lazy(() => import('./views/base/BRD-Ancillaries/BRDAncillaries'))
+const BRDStandard = React.lazy(() => import('./views/base/BRD-Standard/BRDStandard'))
+const FOIDInclusion = React.lazy(() => import('./views/base/FOID-Inclusion/FOIDInclusion'))
+const FOIDInclusions = React.lazy(() => import('./views/base/FOID-Inclusions/FOIDInclusions'))
+const FrequentTraveler = React.lazy(() => import('./views/base/Frequent-Traveler/FrequentTraveler'))
+const FRDFrequent = React.lazy(() => import('./views/base/FRD-Frequent/FRDFrequent'))
+const PrivateFares = React.lazy(() => import('./views/base/private-fares/PrivateFares'))
+const TrackingPlanDraft = React.lazy(() => import('./views/base/tracking-plan-draft/TrackingPlanDraft'))
 const Navs = React.lazy(() => import('./views/base/navs/Navs'))
 const Paginations = React.lazy(() => import('./views/base/paginations/Paginations'))
 const Placeholders = React.lazy(() => import('./views/base/placeholders/Placeholders'))
@@ -68,6 +75,13 @@ const routes = [
   { path: '/base/list-groups', name: 'List Groups', element: ListGroups },
   { path: '/base/FRD-seatmap', name: 'FRD seatmap', element: FRDSeatMap },
   { path: '/base/BRD-Ancillaries', name: 'BRD Ancillaries', element: BRDAncillaries },
+  { path: '/base/BRD-Standard', name: 'BRD Standard', element: BRDStandard },
+  { path: '/base/FOID-Inclusion', name: 'FOID Inclusion', element: FOIDInclusion },
+  { path: '/base/FOID-Inclusions', name: 'FOID Inclusions', element: FOIDInclusions },
+  { path: '/base/Frequent-Traveler', name: 'Frequent Traveler', element: FrequentTraveler },
+  { path: '/base/FRD-Frequent', name: 'FRD Frequent', element: FRDFrequent},  
+  { path: '/base/Private-Fares', name: 'Private Fares', element: PrivateFares},
+  { path: '/base/Tracking-Plan-Draft', name: 'Tracking Plan', element: TrackingPlanDraft},
   { path: '/base/navs', name: 'Navs', element: Navs },
   { path: '/base/paginations', name: 'Paginations', element: Paginations },
   { path: '/base/placeholders', name: 'Placeholders', element: Placeholders },
