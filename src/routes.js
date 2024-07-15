@@ -36,6 +36,14 @@ const XeniApi = React.lazy(() => import('./views/base/xeniapi/XeniAPIs'))
 const FlightsAPI = React.lazy(() => import('./views/base/flights-api/FlightsApi'))
 const AirShopping = React.lazy(() => import('./views/base/air-shopping/AirShopping'))
 const MiscellaneousEndPoints = React.lazy(() => import('./views/base/miscellaneous-endpoints/MiscellaneousEndPoints'))
+const Projects = React.lazy(() => import('./views/base/projects/Projects'))
+const FlatAmountMarkup = React.lazy(() => import('./views/base/flat-amount-markup/FlatAmountMarkup'))
+const SplitPayment = React.lazy(() => import('./views/base/split-payment/SplitPayment'))
+const BRDSplitPayment = React.lazy(() => import('./views/base/BRD-split-payment/BRDSplitPayment'))
+const DisplayFlightComponent = React.lazy(() => import('./views/base/display-flights-component/DisplayFlightComponent'))
+const SeatMap = React.lazy(() => import('./views/base/seat-map/SeatMap'))
+const Ancillaries = React.lazy(() => import('./views/base/ancillaries/Ancillaries'))
+const PassengerAdditionalInformation = React.lazy(() => import('./views/base/passenger-additional-information/PassengerAdditionalInformation'))
 const Navs = React.lazy(() => import('./views/base/navs/Navs'))
 const Paginations = React.lazy(() => import('./views/base/paginations/Paginations'))
 const Placeholders = React.lazy(() => import('./views/base/placeholders/Placeholders'))
@@ -114,6 +122,14 @@ const routes = [
   {path: '/base/flights-api', name: 'Flights API', element: FlightsAPI},
   {path: '/base/air-shopping', name: 'Air Shopping', element: AirShopping},
   {path: '/base/miscellaneous-endpoints', name: 'Miscellaneous Endpoint', element: MiscellaneousEndPoints},
+  {path: '/base/projects', name: 'Projects', element: Projects},
+  {path: '/base/flat-amount-markup', name: 'Flat Amount Markup', element: FlatAmountMarkup},
+  {path: '/base/split-payment', name: 'Split Payment', element: SplitPayment},
+  {path: '/base/BRD-split-payment', name: 'BRD Split Payment', element: BRDSplitPayment},
+  {path: '/base/display-flights-component', name: 'Display Flight Component', element: DisplayFlightComponent},
+  {path: '/base/seat-map', name: 'Seat Map', element: SeatMap},
+  {path: '/base/ancillaries', name: 'Ancillaries', element: Ancillaries},
+  {path: '/base/passenger-additional-information', name: 'Passenger Additional Information', element: PassengerAdditionalInformation},
   { path: '/base/navs', name: 'Navs', element: Navs },
   { path: '/base/paginations', name: 'Paginations', element: Paginations },
   { path: '/base/placeholders', name: 'Placeholders', element: Placeholders },
