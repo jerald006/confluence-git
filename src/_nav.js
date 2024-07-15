@@ -261,21 +261,25 @@ const _nav = [
           },
           {
             component: CNavGroup,
-            name: 'FOID inclusion',
-            to: '/base/FOID--Inclusions',
+            name: 'Expedia Meeting Notes',
+            to: '/base/expedia-meeting-notes',
             icon: <CIcon icon={cilPuzzle} customClassName="nav-icon"/>,
             items: [
               {
                 component: CNavItem,
-                name: 'FOID Inclusion',
-                to: '/base/FOID-Inclusions',
+                name: 'Expedia Meeting Notes',
+                to: '/base/expedia-meeting-notes',
               },
               {
                 component: CNavItem,
-                name: 'FRD - FOID Inclusion - MVP1',
-                to: '/base/FOID-Inclusion',
+                name: '2023-12-22 Meeting notes - Expedia Project Coordination(Internal)',
+                to: '/base/expedia-meeting-notes-coordination',
               },
-              
+              {
+                component: CNavItem,
+                name: '2024-01-02 - Expedia Integration - Phase I - Meeting Notes',
+                to: '/base/expedia-meeting-notes-phase1',
+              },
             ],
           },
           // {
