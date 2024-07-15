@@ -21,7 +21,7 @@ const FRDFrequent = React.lazy(() => import('./views/base/FRD-Frequent/FRDFreque
 const PrivateFares = React.lazy(() => import('./views/base/private-fares/PrivateFares'))
 const TrackingPlanDraft = React.lazy(() => import('./views/base/tracking-plan-draft/TrackingPlanDraft'))
 const UsersSessionControl = React.lazy(() => import('./views/base/users-session-control/UsersSessionControl'))
-const BRDUsersSessionControl = React.lazy(() => import('./views/base/BRD-Users-Session-Control/BRDUsersSessionControl'))
+const BRDUserSessionControl = React.lazy(() => import('./views/base/BRD-users-session-control/BRDUserSessionControl'))
 const DelrayIntegration = React.lazy(() => import('./views/base/delray-integration/DelrayIntegration'))
 const BRDelrayIntegration = React.lazy(() => import('./views/base/BRD-delray-integration/BRDelrayIntegration'))
 const SignUpLoginScenarios = React.lazy(() => import('./views/base/signup-login-scenarios/SignUpLoginScenarios'))
@@ -44,6 +44,17 @@ const DisplayFlightComponent = React.lazy(() => import('./views/base/display-fli
 const SeatMap = React.lazy(() => import('./views/base/seat-map/SeatMap'))
 const Ancillaries = React.lazy(() => import('./views/base/ancillaries/Ancillaries'))
 const PassengerAdditionalInformation = React.lazy(() => import('./views/base/passenger-additional-information/PassengerAdditionalInformation'))
+const CruisesIntegration = React.lazy(() => import('./views/base/cruises-integration/CruisesIntegration'))
+const BRDCruisesIntegration = React.lazy(() => import('./views/base/BRD-cruises-integration/BRDCruisesIntegration'))
+const FRDCruisesIntegrationContent = React.lazy(() => import('./views/base/FRD-cruises-integration-content/FRDCruisesIntegrationContent'))
+const CacheCruisesShipData = React.lazy(() => import('./views/base/cache-cruises-ship-data/CacheCruisesShipData'))
+const Hydrate = React.lazy(() => import('./views/base/hydrate/Hydrate'))
+const CruisesMeetingNotes = React.lazy(() => import('./views/base/cruises-meeting-notes/CruisesMeetingNotes'))
+const FRDCruisesIntegrationShopping = React.lazy(() => import('./views/base/FRD-cruises-integration-shopping/FRDCruisesIntegrationShopping'))
+const FRDFrontEndPresentation = React.lazy(() => import('./views/base/FRD-front-end-presentation/FRDFrontEndPresentation'))
+const FRDCruisesIntegrationBooking = React.lazy(() => import('./views/base/FRD-cruises-integration-booking/FRDCruisesIntegrationBooking'))
+const CruisePocMeetingNotes = React.lazy(() => import('./views/base/cruise-poc-meeting-notes/CruisePocMeetingNotes'))
+const CruiseData = React.lazy(() => import('./views/base/cruise-data/CruiseData'))
 const Navs = React.lazy(() => import('./views/base/navs/Navs'))
 const Paginations = React.lazy(() => import('./views/base/paginations/Paginations'))
 const Placeholders = React.lazy(() => import('./views/base/placeholders/Placeholders'))
@@ -107,7 +118,7 @@ const routes = [
   { path: '/base/Private-Fares', name: 'Private Fares', element: PrivateFares},
   { path: '/base/Tracking-Plan-Draft', name: 'Tracking Plan', element: TrackingPlanDraft},
   { path: '/base/Users-Session-Control', name: 'Users Session Control', element: UsersSessionControl},
-  { path: '/base/BRD-Users-Session-Control', name: 'BRD Users Session Control', element: BRDUsersSessionControl},
+  { path: '/base/BRD-Users-Session-Control', name: 'BRD Users Session Control', element: BRDUserSessionControl},
   { path: '/base/delray-integration', name: 'Delray Integration', element: DelrayIntegration},
   { path: '/base/BRD-delray-integration', name: 'BRD Delray Integration', element: BRDelrayIntegration},
   { path: '/base/signup-login-scenarios', name: 'Sign Up And Login Scenarios', element: SignUpLoginScenarios},
@@ -130,6 +141,17 @@ const routes = [
   {path: '/base/seat-map', name: 'Seat Map', element: SeatMap},
   {path: '/base/ancillaries', name: 'Ancillaries', element: Ancillaries},
   {path: '/base/passenger-additional-information', name: 'Passenger Additional Information', element: PassengerAdditionalInformation},
+  {path: '/base/cruises-integration', name: 'Cruises Integration', element: CruisesIntegration},
+  { path: '/base/BRD-cruises-integration', name: 'BRD Cruises Integration', element: BRDCruisesIntegration },
+  { path: '/base/FRD-cruises-integration-content', name: 'FRD Cruises Integration Content', element: FRDCruisesIntegrationContent },
+  { path: '/base/cache-cruises-ship-data', name: 'Cache Cruises Ship Data', element: CacheCruisesShipData },
+  { path: '/base/hydrate', name: 'Hydrate', element: Hydrate },
+  { path: '/base/cruises-meeting-notes', name: 'Cruises Meeting Notes', element: CruisesMeetingNotes },
+  { path: '/base/FRD-cruises-integration-shopping', name: 'FRD Cruises Integration Shopping', element: FRDCruisesIntegrationShopping },
+  { path: '/base/FRD-front-end-presentation', name: 'FRD Front End Presentation', element: FRDFrontEndPresentation },
+  { path: '/base/FRD-cruises-integration-booking', name: 'FRD Cruises Integration Booking', element: FRDCruisesIntegrationBooking },
+  { path: '/base/cruise-poc-meeting-notes', name: 'Cruise Poc Meeting Notes', element: CruisePocMeetingNotes },
+  { path: '/base/cruise-data', name: 'Cruise Data', element: CruiseData },
   { path: '/base/navs', name: 'Navs', element: Navs },
   { path: '/base/paginations', name: 'Paginations', element: Paginations },
   { path: '/base/placeholders', name: 'Placeholders', element: Placeholders },

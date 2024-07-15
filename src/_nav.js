@@ -219,7 +219,7 @@ const _nav = [
           {
             component: CNavItem,
             name: 'BRD - Users session Control',
-            to: '/base/BRD-Users-Sesion-Control',
+            to: '/base/BRD-users-session-control',
           },
         ],
       },

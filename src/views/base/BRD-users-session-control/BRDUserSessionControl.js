@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BRDUsersSessionControl() {
+function BRDUserSessionControl() {
   return (
     <>
       <title>XeniApp : BRD - Users session Control</title>
@@ -487,4 +487,4 @@ function BRDUsersSessionControl() {
   )
 }
 
-export default BRDUsersSessionControl
+export default BRDUserSessionControl
