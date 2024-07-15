@@ -146,7 +146,7 @@ const _nav = [
             component: CNavGroup,
             name: 'FOID inclusion',
             to: '/base/FOID--Inclusions',
-            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon"/>,
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
             items: [
               {
                 component: CNavItem,
@@ -158,14 +158,13 @@ const _nav = [
                 name: 'FRD - FOID Inclusion - MVP1',
                 to: '/base/FOID-Inclusion',
               },
-              
             ],
           },
           {
             component: CNavGroup,
             name: 'Frequent Traveler Inclusions',
             to: '/base/Frequent Traveler Inclusions',
-            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon"/>,
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
             items: [
               {
                 component: CNavItem,
@@ -177,9 +176,8 @@ const _nav = [
                 name: 'FRD - Frequent Traveler Inclusion - MVP1',
                 to: '/base/FRD-Frequent',
               },
-              
             ],
-          }
+          },
         ],
       },
       {
@@ -263,7 +261,7 @@ const _nav = [
             component: CNavGroup,
             name: 'Expedia Meeting Notes',
             to: '/base/expedia-meeting-notes',
-            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon"/>,
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
             items: [
               {
                 component: CNavItem,
@@ -282,25 +280,42 @@ const _nav = [
               },
             ],
           },
-          // {
-          //   component: CNavGroup,
-          //   name: 'Frequent Traveler Inclusions',
-          //   to: '/base/Frequent Traveler Inclusions',
-          //   icon: <CIcon icon={cilPuzzle} customClassName="nav-icon"/>,
-          //   items: [
-          //     {
-          //       component: CNavItem,
-          //       name: 'Frequent Traveler Inclusions',
-          //       to: '/base/Frequent-Traveler',
-          //     },
-          //     {
-          //       component: CNavItem,
-          //       name: 'FRD - Frequent Traveler Inclusion - MVP1',
-          //       to: '/base/FRD-Frequent',
-          //     },
-              
-          //   ],
-          // }
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Xeni API',
+        to: '/base/xeni-api',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Xeni API',
+            to: '/base/xeni-api',
+          },
+          {
+            component: CNavGroup,
+            name: 'Flights API',
+            to: '/base/flights-api',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Flights API',
+                to: '/base/flights-api',
+              },
+              {
+                component: CNavItem,
+                name: 'Air Shopping',
+                to: '/base/air-shopping',
+              },
+              {
+                component: CNavItem,
+                name: 'Miscellaneous endpoints',
+                to: '/base/miscellaneous-endpoints',
+              },
+            ],
+          },
         ],
       },
       {
