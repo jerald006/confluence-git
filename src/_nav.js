@@ -869,51 +869,51 @@ const _nav = [
           },
         ],
       },
-      {
-        component: CNavItem,
-        name: 'Navs & Tabs',
-        to: '/base/navs',
-      },
-      {
-        component: CNavItem,
-        name: 'Pagination',
-        to: '/base/paginations',
-      },
-      {
-        component: CNavItem,
-        name: 'Placeholders',
-        to: '/base/placeholders',
-      },
-      {
-        component: CNavItem,
-        name: 'Popovers',
-        to: '/base/popovers',
-      },
-      {
-        component: CNavItem,
-        name: 'Progress',
-        to: '/base/progress',
-      },
-      {
-        component: CNavItem,
-        name: 'Spinners',
-        to: '/base/spinners',
-      },
-      {
-        component: CNavItem,
-        name: 'Tables',
-        to: '/base/tables',
-      },
-      {
-        component: CNavItem,
-        name: 'Tabs',
-        to: '/base/tabs',
-      },
-      {
-        component: CNavItem,
-        name: 'Tooltips',
-        to: '/base/tooltips',
-      },
+      // {
+      //   component: CNavItem,
+      //   name: 'Navs & Tabs',
+      //   to: '/base/navs',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Pagination',
+      //   to: '/base/paginations',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Placeholders',
+      //   to: '/base/placeholders',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Popovers',
+      //   to: '/base/popovers',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Progress',
+      //   to: '/base/progress',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Spinners',
+      //   to: '/base/spinners',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Tables',
+      //   to: '/base/tables',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Tabs',
+      //   to: '/base/tabs',
+      // },
+      // {
+      //   component: CNavItem,
+      //   name: 'Tooltips',
+      //   to: '/base/tooltips',
+      // },
     ],
   },
   {
@@ -921,183 +921,871 @@ const _nav = [
     name: 'About Xeni',
     to: '/base/about-xeni',
   },
+  {
+    component: CNavGroup,
+    name: 'Product Architecture - XeniApp',
+    to: '/base/product-architecture',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Product Architecture - XeniApp',
+        to: '/base/product-architecture',
+      },
+      {
+        component: CNavItem,
+        name: 'Actors - XeniApp',
+        to: '/base/actors-xeni-app',
+      },
+      {
+        component: CNavItem,
+        name: 'Functional Requirements',
+        to: '/base/functional-requirements',
+      },
+      {
+        component: CNavItem,
+        name: 'Commissions',
+        to: '/base/commissions',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Technical Documents - XeniApp',
+    to: '/base/technical-documents-xeni-app',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Technical Documents - XeniApp',
+        to: '/base/technical-documents-xeni-app',
+      },
+      {
+        component: CNavGroup,
+        name: 'Environment Setup - XeniApp',
+        to: '/base/environment-setup-xeni-app',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Environment Setup - XeniApp',
+            to: '/base/environment-setup-xeni-app',
+          },
+          {
+            component: CNavItem,
+            name: 'XeniApp-infra-vpc',
+            to: '/base/xeniapp-infra-vpc',
+          },
+          {
+            component: CNavItem,
+            name: 'xeniapp-infra-backend',
+            to: '/base/xeniapp-infra-backend',
+          },
+          {
+            component: CNavItem,
+            name: 'xeniapp-infra-frontend',
+            to: '/base/xeniapp-infra-frontend',
+          },
+          {
+            component: CNavItem,
+            name: 'xeniapp-infra-database',
+            to: '/base/xeniapp-infra-database',
+          },
+          {
+            component: CNavItem,
+            name: 'xeniapp-packer',
+            to: '/base/xeniapp-packer',
+          },
+        ],
+      },
+      {
+        component: CNavItem,
+        name: 'Environment setup - Multi-Tenant',
+        to: '/base/environment-setup-multi-tenant',
+      },
+      {
+        component: CNavItem,
+        name: 'Database-Xeniapp',
+        to: '/base/database-xeniapp',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Xeni 3.0',
+    to: '/base/xeni-3.0',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Xeni 3.0',
+        to: '/base/xeni-3.0',
+      },
+      {
+        component: CNavGroup,
+        name: 'Xeni 3.0 - CTQs',
+        to: '/base/xeni-ctqs',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Xeni 3.0 - CTQs',
+            to: '/base/xeni-ctqs',
+          },
+          {
+            component: CNavGroup,
+            name: 'Frontend',
+            to: '/base/frontend',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Frontend',
+                to: '/base/frontend',
+              },
+              {
+                component: CNavItem,
+                name: 'Decision Guide',
+                to: '/base/decision-guide',
+              },
+              {
+                component: CNavItem,
+                name: 'Definition of done',
+                to: '/base/definition-of-done',
+              },
+              {
+                component: CNavItem,
+                name: 'Local workstation setup',
+                to: '/base/local-workstation-setup',
+              },
+              {
+                component: CNavItem,
+                name: 'API Compatibility',
+                to: '/base/API-compatibility',
+              },
+              {
+                component: CNavItem,
+                name: 'Gap Analysis for PROD Ready',
+                to: '/base/gap-analysis-for-PROD-ready',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Xeni 3.0 Testing',
+        to: '/base/xeni-testing',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Xeni 3.0 Testing',
+            to: '/base/xeni-testing',
+          },
+          {
+            component: CNavItem,
+            name: 'Xeni 3.0 Mobile Browser Testing',
+            to: '/base/xeni-mobile-browser-testing',
+          },
+          {
+            component: CNavItem,
+            name: 'UT(Unit Testing)/Integration Testing',
+            to: '/base/xeni-testing',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Sprint Demos',
+        to: '/base/sprint-demos',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Sprint Demos',
+            to: '/base/sprint-demos',
+          },
+          {
+            component: CNavItem,
+            name: 'Demo - 02/22/2022 - Car Features',
+            to: '/base/demo-car-features',
+          },
+          {
+            component: CNavItem,
+            name: 'Demo - 15/04/2022 - Hotel Features',
+            to: '/base/demo-hotel-features',
+          },
+          {
+            component: CNavItem,
+            name: 'Sprint 8- 2.0 Features for 3.0- Demo 1- 17May2022',
+            to: '/base/sprint-features-demo-may',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Grooming Sessions and Information Sharing',
+        to: '/base/grooming-sessions-and-information-sharing',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Grooming Sessions and Information Sharing',
+            to: '/base/grooming-sessions-and-information-sharing',
+          },
+          {
+            component: CNavItem,
+            name: '2.0 Features for 3.0- Story Grooming 1- 21Apr2022',
+            to: '/base/2.0-features-story-grooming-1',
+          },
+          {
+            component: CNavItem,
+            name: '2.0 Features for 3.0- Story Grooming 2- 10May2022',
+            to: '/base/2.0-features-story-grooming-2',
+          },
+          {
+            component: CNavItem,
+            name: '2.0 Features for 3.0- Story Grooming 3- 12May2022',
+            to: '/base/2.0-features-story-grooming-3',
+          },
+          {
+            component: CNavItem,
+            name: '2.0 Features for 3.0- Story Sizing Sprint 9- 13May2022',
+            to: '/base/2.0-features-story-sizing-sprint-9',
+          },
+          {
+            component: CNavItem,
+            name: '2.0 Features for 3.0- Story Grooming 4- 25May2022',
+            to: '/base/2.0-features-story-grooming-4',
+          },
+          {
+            component: CNavItem,
+            name: '2.0 Features for 3.0- Story Grooming 5- 7Jun2022',
+            to: '/base/2.0-features-story-grooming-5',
+          },
+          {
+            component: CNavItem,
+            name: '2.0 Features for 3.0- Story Grooming 6- 23Jun2022',
+            to: '/base/2.0-features-story-grooming-6',
+          },
+          {
+            component: CNavItem,
+            name: 'Clarification regarding Confirmation Page for Booking Reports-My Trips- 14Jun22',
+            to: '/base/clarification-regarding-confirmation-page-booking-reports',
+          },
+          {
+            component: CNavItem,
+            name: '3.0- Hotel- Room Grouping Issue Discussion- 15Jun2022',
+            to: '/base/hotel-room-grouping-issue-discussion',
+          },
+          {
+            component: CNavItem,
+            name: 'Xeni 3.0- BitPay Integration Grooming Session- 7Nov2022',
+            to: '/base/bitpay-integration-grooming-session',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'X3UI 3.0 Sprint Retrospectives',
+        to: '/base/x3ui-3.0-sprint-retrospectives',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'X3UI 3.0 Sprint Retrospectives',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: 'X3UI Sprint 6 Retrospective',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: 'X3UI Sprint 8 Retrospective',
+            to: '/base/x3ui-sprint-8-retrospective',
+          },
+        ],
+      },
+      {
+        component: CNavItem,
+        name: 'Xeni 3.0- Refactoring- Brainstorming Session- 4Nov2022',
+        to: '/base/xeni-3.0-refactoring-brainstorming-session',
+      },
+      {
+        component: CNavItem,
+        name: 'Manual Subscription',
+        to: '/base/manual-subscription',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Production Deployments',
+    to: '/base/production-deployments',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Production Deployments',
+        to: '/base/production-deployments',
+      },
+      {
+        component: CNavItem,
+        name: 'Xeni 3.0 Production Push Plan',
+        to: '/base/xeni-3.0-production-push-plan',
+      },
+      {
+        component: CNavItem,
+        name: 'Prod Deployment - 29 Jan 2022',
+        to: '/base/prod-depoyment',
+      },
+      {
+        component: CNavItem,
+        name: 'Activities Go Live Plan',
+        to: '/base/activities-go-live-plan',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Process Management',
+    to: '/base/production-deployments',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Process Management',
+        to: '/base/production-deployments',
+      },
+      {
+        component: CNavGroup,
+        name: 'API - Improvements',
+        to: '/base/x3ui-3.0-sprint-retrospectives',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'API - Improvements',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: 'Xeni Refactoring',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+        ],
+      },
+      {
+        component: CNavItem,
+        name: 'Git Strategies',
+        to: '/base/xeni-3.0-production-push-plan',
+      },
+      {
+        component: CNavItem,
+        name: 'Centralized Logging',
+        to: '/base/prod-depoyment',
+      },
+      {
+        component: CNavGroup,
+        name: 'Development Process',
+        to: '/base/x3ui-3.0-sprint-retrospectives',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Development Process',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavGroup,
+            name: 'Setting Up XeniApp WebApp in Local Environment',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Setting Up XeniApp WebApp in Local Environment',
+                to: '/base/x3ui-3.0-sprint-retrospectives',
+              },
+              {
+                component: CNavGroup,
+                name: 'For Mac',
+                to: '/base/x3ui-3.0-sprint-retrospectives',
+                icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+                items: [
+                  {
+                    component: CNavItem,
+                    name: 'For Mac',
+                    to: '/base/x3ui-3.0-sprint-retrospectives',
+                  },
+                  {
+                    component: CNavItem,
+                    name: 'API',
+                    to: '/base/x3ui-3.0-sprint-retrospectives',
+                  },
+                  {
+                    component: CNavItem,
+                    name: 'React',
+                    to: '/base/x3ui-3.0-sprint-retrospectives',
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            component: CNavItem,
+            name: 'QA Deployment',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: 'Auditing requests and responses to Vendors',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: 'Git Flow Process',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: 'Handling SMTP credentials provided by agency owner',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: 'Deploy to prod',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Significance of Epics, User Stories, Tasks and Bugs',
+        to: '/base/x3ui-3.0-sprint-retrospectives',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Significance of Epics, User Stories, Tasks and Bugs',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: 'Bug/Task Development Process',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: 'Story Creation',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: 'Bug Creation',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+        ],
+      },
+      {
+        component: CNavItem,
+        name: 'UI/UX Component & Application Pages',
+        to: '/base/x3ui-sprint-6-retrospective',
+      },
+      {
+        component: CNavItem,
+        name: 'Xeni Cleanup Plan',
+        to: '/base/x3ui-sprint-6-retrospective',
+      },
+      {
+        component: CNavGroup,
+        name: 'Customer Service',
+        to: '/base/x3ui-3.0-sprint-retrospectives',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Customer Service',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: 'New Sign Up Outreach',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Project Management',
+    to: '/base/product-architecture',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Project Management',
+        to: '/base/product-architecture',
+      },
+      {
+        component: CNavItem,
+        name: 'UI Improvements',
+        to: '/base/actors-xeni-app',
+      },
+      {
+        component: CNavGroup,
+        name: 'Meeting notes',
+        to: '/base/x3ui-3.0-sprint-retrospectives',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Meeting notes',
+            to: '/base/x3ui-3.0-sprint-retrospectives',
+          },
+          {
+            component: CNavItem,
+            name: '2021-10-25 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2023-11-21 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-10-11 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-10-04 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-09-27 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-09-20 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-09-13 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-09-06 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-08-30 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-08-15 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-08-22 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-08-10 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-08-01 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-07-26 Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-07-19 Meeing',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-07-05 Team Meeing',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-07-12 Team Meeing',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2021-10-18 Team Meeing',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+          {
+            component: CNavItem,
+            name: '2024-01-03 - Product Discussion - Meeing notes',
+            to: '/base/x3ui-sprint-6-retrospective',
+          },
+        ],
+      },
+      {
+        component: CNavItem,
+        name: 'Revenue Optimizer',
+        to: '/base/functional-requirements',
+      },
+      {
+        component: CNavItem,
+        name: 'Xeni 2.0/3.0',
+        to: '/base/commissions',
+      },
+      {
+        component: CNavItem,
+        name: 'Blockchain',
+        to: '/base/commissions',
+      },
+      {
+        component: CNavItem,
+        name: 'CSI Document',
+        to: '/base/commissions',
+      },
+      {
+        component: CNavItem,
+        name: 'Travalla Document',
+        to: '/base/commissions',
+      },
+      {
+        component: CNavItem,
+        name: 'Phocus Wright',
+        to: '/base/commissions',
+      },
+      {
+        component: CNavItem,
+        name: 'Issue List',
+        to: '/base/commissions',
+      },
+    ],
+  },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Product Architecture - XeniApp',
+  //   to: '/base/product-architecture',
+  //   icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Product Architecture - XeniApp',
+  //       to: '/base/product-architecture',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Actors - XeniApp',
+  //       to: '/base/actors-xeni-app',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Functional Requirements',
+  //       to: '/base/functional-requirements',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Commissions',
+  //       to: '/base/commissions',
+  //     },
+  //   ],
+  // },
 
-  {
-    component: CNavGroup,
-    name: 'Buttons',
-    to: '/buttons',
-    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Buttons',
-        to: '/buttons/buttons',
-      },
-      {
-        component: CNavItem,
-        name: 'Buttons groups',
-        to: '/buttons/button-groups',
-      },
-      {
-        component: CNavItem,
-        name: 'Dropdowns',
-        to: '/buttons/dropdowns',
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Forms',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Form Control',
-        to: '/forms/form-control',
-      },
-      {
-        component: CNavItem,
-        name: 'Select',
-        to: '/forms/select',
-      },
-      {
-        component: CNavItem,
-        name: 'Checks & Radios',
-        to: '/forms/checks-radios',
-      },
-      {
-        component: CNavItem,
-        name: 'Range',
-        to: '/forms/range',
-      },
-      {
-        component: CNavItem,
-        name: 'Input Group',
-        to: '/forms/input-group',
-      },
-      {
-        component: CNavItem,
-        name: 'Floating Labels',
-        to: '/forms/floating-labels',
-      },
-      {
-        component: CNavItem,
-        name: 'Layout',
-        to: '/forms/layout',
-      },
-      {
-        component: CNavItem,
-        name: 'Validation',
-        to: '/forms/validation',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Charts',
-    to: '/charts',
-    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavGroup,
-    name: 'Icons',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'CoreUI Free',
-        to: '/icons/coreui-icons',
-        badge: {
-          color: 'success',
-          text: 'NEW',
-        },
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Flags',
-        to: '/icons/flags',
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Brands',
-        to: '/icons/brands',
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Notifications',
-    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Alerts',
-        to: '/notifications/alerts',
-      },
-      {
-        component: CNavItem,
-        name: 'Badges',
-        to: '/notifications/badges',
-      },
-      {
-        component: CNavItem,
-        name: 'Modal',
-        to: '/notifications/modals',
-      },
-      {
-        component: CNavItem,
-        name: 'Toasts',
-        to: '/notifications/toasts',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Widgets',
-    to: '/widgets',
+  // {
+  //   component: CNavGroup,
+  //   name: 'Buttons',
+  //   to: '/buttons',
+  //   icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Buttons',
+  //       to: '/buttons/buttons',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Buttons groups',
+  //       to: '/buttons/button-groups',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Dropdowns',
+  //       to: '/buttons/dropdowns',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Forms',
+  //   icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Form Control',
+  //       to: '/forms/form-control',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Select',
+  //       to: '/forms/select',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Checks & Radios',
+  //       to: '/forms/checks-radios',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Range',
+  //       to: '/forms/range',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Input Group',
+  //       to: '/forms/input-group',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Floating Labels',
+  //       to: '/forms/floating-labels',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Layout',
+  //       to: '/forms/layout',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Validation',
+  //       to: '/forms/validation',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavItem,
+  //   name: 'Charts',
+  //   to: '/charts',
+  //   icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Icons',
+  //   icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'CoreUI Free',
+  //       to: '/icons/coreui-icons',
+  //       badge: {
+  //         color: 'success',
+  //         text: 'NEW',
+  //       },
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'CoreUI Flags',
+  //       to: '/icons/flags',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'CoreUI Brands',
+  //       to: '/icons/brands',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Notifications',
+  //   icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Alerts',
+  //       to: '/notifications/alerts',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Badges',
+  //       to: '/notifications/badges',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Modal',
+  //       to: '/notifications/modals',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Toasts',
+  //       to: '/notifications/toasts',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavItem,
+  //   name: 'Widgets',
+  //   to: '/widgets',
     // icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
     // badge: {
     //   color: 'info',
     //   text: 'NEW',
     // },
-  },
-  {
-    component: CNavTitle,
-    name: 'Extras',
-  },
-  {
-    component: CNavGroup,
-    name: 'Pages',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Login',
-        to: '/login',
-      },
-      {
-        component: CNavItem,
-        name: 'Register',
-        to: '/register',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 404',
-        to: '/404',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 500',
-        to: '/500',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Docs',
-    href: 'https://coreui.io/react/docs/templates/installation/',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
-  },
+  // },
+  // {
+  //   component: CNavTitle,
+  //   name: 'Extras',
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Pages',
+  //   icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Login',
+  //       to: '/login',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Register',
+  //       to: '/register',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Error 404',
+  //       to: '/404',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Error 500',
+  //       to: '/500',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavItem,
+  //   name: 'Docs',
+  //   href: 'https://coreui.io/react/docs/templates/installation/',
+  //   icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+  // },
 ]
 
 export default _nav
