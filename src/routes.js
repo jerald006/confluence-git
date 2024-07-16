@@ -64,6 +64,11 @@ const BRDRciIntegration = React.lazy(() => import('./views/base/BRD-RCI-Integrat
 const FRDRciIntegrationStaticData = React.lazy(() => import('./views/base/FRD-RCI-Integration-static-data/FRDRciIntegrationStaticData'))
 const FRDRciIntegrationAvailabilityShopping = React.lazy(() => import('./views/base/FRD-RCI-Integration-availability-shopping/FRDRciIntegrationAvailabilityShopping'))
 const FRDRciIntegrationBookingCheckout = React.lazy(() => import('./views/base/FRD-RCI-Integration-booking-checkout/FRDRciIntegrationBookingCheckout'))
+const HyperguestIntegration = React.lazy(() => import('./views/base/hyperguest-integration/HyperguestIntegration'))
+const HyperguestIntegrationGetHotelList = React.lazy(() => import('./views/base/FRD-hyperguest-integration-get-hotel-list/HyperguestIntegrationGetHotelList'))
+const HyperguestIntegrationAvailability = React.lazy(() => import('./views/base/FRD-hyperguest-integration-availability/HyperguestIntegrationAvailability'))
+const AgentsAssociationClients = React.lazy(() => import('./views/base/agents-association-clients/AgentsAssociationClients'))
+const AgentsAssociationClientsEnhancementsMeetingNotes = React.lazy(() => import('./views/base/agents-association-clients-enhancements-meeting-notes/AgentsAssociationClientsEnhancementsMeetingNotes'))
 const Navs = React.lazy(() => import('./views/base/navs/Navs'))
 const Paginations = React.lazy(() => import('./views/base/paginations/Paginations'))
 const Placeholders = React.lazy(() => import('./views/base/placeholders/Placeholders'))
@@ -170,6 +175,11 @@ const routes = [
   { path: '/base/FRD-RCI-integration-static-data', name: 'FRD RCI Integration Static Data', element: FRDRciIntegrationStaticData },
   { path: '/base/FRD-RCI-integration-availability-shopping', name: 'FRD RCI Integration Availability Shopping', element: FRDRciIntegrationAvailabilityShopping },
   { path: '/base/FRD-RCI-integration-booking-checkout', name: 'FRD RCI Integration Booking Checkout', element: FRDRciIntegrationBookingCheckout },
+  { path: '/base/hyperguest-integration', name: 'Hyperguest Integration', element: HyperguestIntegration },
+  { path: '/base/FRD-hyperguest-integration-get-hotel-list', name: 'FRD Hyperguest Integration Get Hotel List', element: HyperguestIntegrationGetHotelList },
+  { path: '/base/FRD-hyperguest-integration-availability', name: 'FRD Hyperguest Integration Availability', element: HyperguestIntegrationAvailability },
+  { path: '/base/agents-association-clients', name: 'Agents Association Clients', element: AgentsAssociationClients },
+  { path: '/base/agents-association-clients-enhancements-meeting-notes', name: 'Agents Association Clients Enhancements Meeting Notes', element: AgentsAssociationClientsEnhancementsMeetingNotes },
   { path: '/base/navs', name: 'Navs', element: Navs },
   { path: '/base/paginations', name: 'Paginations', element: Paginations },
   { path: '/base/placeholders', name: 'Placeholders', element: Placeholders },
