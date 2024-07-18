@@ -1581,6 +1581,508 @@ const _nav = [
       },
     ],
   },
+  {
+    component: CNavGroup,
+    name: 'Features - XeniApp',
+    to: '/base/features-xeniapp',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Features - XeniApp',
+        to: '/base/features-xeniapp',
+      },
+      {
+        component: CNavItem,
+        name: 'Super Admin Features',
+        to: '/base/super-admin-features',
+      },
+      {
+        component: CNavItem,
+        name: 'Agency Owner Features',
+        to: '/base/agency-owner-features',
+      },
+      {
+        component: CNavGroup,
+        name: 'Flights Booking',
+        to: '/base/flights-booking',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Flights Booking',
+            to: '/base/flights-booking',
+          },
+          {
+            component: CNavItem,
+            name: 'Flight Flow',
+            to: '/base/flight flow',
+          },
+          {
+            component: CNavItem,
+            name: 'cabin selecvtion issue',
+            to: '/base/cabin-selecvtion-issue',
+          },
+          {
+            component: CNavGroup,
+            name: 'Flight Module architecture',
+            to: '/base/flight-module-architecture',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Flight Module architecture',
+                to: '/base/flight-module-architecture',
+              },
+              {
+                component: CNavItem,
+                name: 'Frontend module breakdown',
+                to: '/base/frontend-module-breakdown',
+              },
+              {
+                component: CNavItem,
+                name: 'backend api breakdown',
+                to: '/base/backend-api-breakdown',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Hotels',
+        to: '/base/hotels',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Hotels',
+            to: '/base/hotels',
+          },
+          {
+            component: CNavItem,
+            name: 'Hotel Features',
+            to: '/base/hotel-features',
+          },
+          {
+            component: CNavItem,
+            name: 'Hotel Testing',
+            to: '/base/hotel-testing',
+          },
+          {
+            component: CNavItem,
+            name: 'Hotelbed',
+            to: '/base/hotelbed',
+          },
+          {
+            component: CNavGroup,
+            name: 'Hotel Development',
+            to: '/base/hotel-development',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Hotel Development',
+                to: '/base/hotel-development',
+              },
+              {
+                component: CNavItem,
+                name: 'Hotel Mapping - Vervotech API',
+                to: '/base/hotel-mapping-vervotech-api',
+              },
+            ],
+          },
+          {
+            component: CNavGroup,
+            name: 'CTW Tech One Pager',
+            to: '/base/ctw-tech-one-pager',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'CTW Tech One Pager',
+                to: '/base/ctw-tech-one-pager',
+              },
+              {
+                component: CNavItem,
+                name: 'CTW Design Document Questions',
+                to: '/base/ctw-design-document-questions',
+              },
+            ],
+          },
+          {
+            component: CNavItem,
+            name: 'Hotelbeds Certification',
+            to: '/base/hotelbeds-certification',
+          },
+          {
+            component: CNavItem,
+            name: 'Unit Testing for hotelBeds',
+            to: '/base/unit-testing-for-hotelbeds',
+          },
+          {
+            component: CNavItem,
+            name: 'Hotel Integration',
+            to: '/base/hotel-integration',
+          },
+          {
+            component: CNavItem,
+            name: 'Hotel Filters API Requirements',
+            to: '/base/hotel-filters-api-requirements',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Car Rental Features',
+        to: '/base/car-rental-features',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Car Rental Features',
+            to: '/base/car-rental-features',
+          },
+          {
+            component: CNavItem,
+            name: 'Car Rental MApping - Canect API',
+            to: '/base/Car Rental MApping - canect-api',
+          },
+          {
+            component: CNavItem,
+            name: 'Xeni 3.0 Car Enhancements',
+            to: '/base/xeni-car-enhancements',
+          },
+          {
+            component: CNavItem,
+            name: 'Rental Car Testing',
+            to: '/base/rental-car-testing',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Activities',
+        to: '/base/activities',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Activities',
+            to: '/base/activities',
+          },
+          {
+            component: CNavItem,
+            name: 'Activity Testing',
+            to: '/base/activity-testing',
+          },
+        ],
+      },
+      {
+        component: CNavItem,
+        name: 'Flight Cancellation and Repricing',
+        to: '/base/flight-cancellation-and-repricing',
+      },
+      {
+        component: CNavItem,
+        name: 'Flight Module',
+        to: '/base/flight-module',
+      },
+      {
+        component: CNavItem,
+        name: 'Book Now',
+        to: '/base/book-now',
+      },
+      {
+        component: CNavItem,
+        name: 'Xeniapp Cart',
+        to: '/base/xeniapp-cart',
+      },
+      {
+        component: CNavGroup,
+        name: 'XeniPay',
+        to: '/base/xenipay',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'XeniPay',
+            to: '/base/xenipay',
+          },
+          {
+            component: CNavItem,
+            name: 'Blockchain Milestones',
+            to: '/base/blockchain-milestones',
+          },
+          {
+            component: CNavItem,
+            name: 'About',
+            to: '/base/about',
+          },
+          {
+            component: CNavItem,
+            name: 'Xenipay Edge Case',
+            to: '/base/xenipay-edge-case',
+          },
+          {
+            component: CNavItem,
+            name: 'API List',
+            to: '/base/api-list',
+          },
+          {
+            component: CNavItem,
+            name: 'Questions',
+            to: '/base/questions',
+          },
+          {
+            component: CNavItem,
+            name: 'Notes - XeniPay',
+            to: '/base/notes-xenipay',
+          },
+          {
+            component: CNavItem,
+            name: 'Process Overview',
+            to: '/base/process-overview',
+          },
+          {
+            component: CNavGroup,
+            name: 'Postman Testing',
+            to: '/base/postman-testing',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Postman Testing',
+                to: '/base/Postman-testing',
+              },
+              {
+                component: CNavItem,
+                name: 'Booings-1',
+                to: '/base/bookings-1',
+              },
+            ],
+          },
+          {
+            component: CNavItem,
+            name: 'Notes for XApp Integration',
+            to: '/base/notes-for-xapp-interation',
+          },
+          {
+            component: CNavGroup,
+            name: 'Meetings',
+            to: '/base/meetings',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Meetings',
+                to: '/base/meetings',
+              },
+              {
+                component: CNavItem,
+                name: '2021 14th September - 11:00',
+                to: '/base/september-14',
+              },
+              {
+                component: CNavItem,
+                name: '2021 8th September - 18:00',
+                to: '/base/september-8',
+              },
+              {
+                component: CNavItem,
+                name: '2021 9th September - 12:00',
+                to: '/base/september-9',
+              },
+              {
+                component: CNavItem,
+                name: '2021 Sep 16 - 12:30',
+                to: '/base/september-16',
+              },
+              {
+                component: CNavItem,
+                name: '2021 09 17 - 12:30 (17th September)',
+                to: '/base/september-17',
+              },
+              {
+                component: CNavItem,
+                name: '2022 Aug 4th',
+                to: '/base/auguest-4',
+              },
+              {
+                component: CNavItem,
+                name: '2022 Aug 3rd',
+                to: '/base/auguest-3',
+              },
+              {
+                component: CNavItem,
+                name: '2022 Aug 5th',
+                to: '/base/auguest-5',
+              },
+              {
+                component: CNavItem,
+                name: '2022 Aug 4th USER FLOW',
+                to: '/base/auguest-4-user-flow',
+              },
+              {
+                component: CNavItem,
+                name: 'Bitpay Customization Call 11/10/2022',
+                to: '/base/bitpay-customization-call',
+              },
+            ],
+          },
+          {
+            component: CNavGroup,
+            name: 'Processes',
+            to: '/base/processes',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Processes',
+                to: '/base/processes',
+              },
+              {
+                component: CNavItem,
+                name: 'User',
+                to: '/base/user',
+              },
+              {
+                component: CNavItem,
+                name: 'Bookings',
+                to: '/base/bookings',
+              },
+            ],
+          },
+          {
+            component: CNavItem,
+            name: 'XeniPay Requirement Specification',
+            to: '/base/xenipay-requirement-specification',
+          },
+          {
+            component: CNavItem,
+            name: 'Integrating XeniPay',
+            to: '/base/integrating-xenipay',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'XeniPayment',
+        to: '/base/xenipayment',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'XeniPayment',
+            to: '/base/xenipayment',
+          },
+          {
+            component: CNavItem,
+            name: 'About - XeniPayment',
+            to: '/base/about-xenipayment',
+          },
+          {
+            component: CNavItem,
+            name: 'ERD - XeniPayment',
+            to: '/base/ERD - xenipayment',
+          },
+          {
+            component: CNavGroup,
+            name: 'Architecture - XeniPayment',
+            to: '/base/architecture-xenipayment',
+            icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+            items: [
+              {
+                component: CNavItem,
+                name: 'Architecture - XeniPayment',
+                to: '/base/architecture-xenipayment',
+              },
+              {
+                component: CNavGroup,
+                name: 'Gateway',
+                to: '/base/gateway',
+                icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+                items: [
+                  {
+                    component: CNavItem,
+                    name: 'Gateway',
+                    to: '/base/gateway',
+                  },
+                  {
+                    component: CNavItem,
+                    name: 'HTTP Endpoints',
+                    to: '/base/http-endpoints',
+                  },
+                  {
+                    component: CNavItem,
+                    name: 'Technical Document',
+                    to: '/base/technical-document',
+                  },
+                ],
+              },
+              {
+                component: CNavGroup,
+                name: 'Bitpay',
+                to: '/base/bitpay',
+                icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+                items: [
+                  {
+                    component: CNavItem,
+                    name: 'Bitpay',
+                    to: '/base/bitpay',
+                  },
+                  {
+                    component: CNavItem,
+                    name: 'Technical Document - Bitpay',
+                    to: '/base/technical-document-bitpay',
+                  },
+                ],
+              },
+              {
+                component: CNavItem,
+                name: 'Security',
+                to: '/base/security',
+              },
+              {
+                component: CNavGroup,
+                name: 'Developers Guide',
+                to: '/base/developers-guide',
+                icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+                items: [
+                  {
+                    component: CNavItem,
+                    name: 'Developers Guide',
+                    to: '/base/developers-guide',
+                  },
+                  {
+                    component: CNavItem,
+                    name: 'Repositories',
+                    to: '/base/repositories',
+                  },
+                  {
+                    component: CNavItem,
+                    name: 'Git Strategy',
+                    to: '/base/git-strategy',
+                  },
+                ],
+              },
+              {
+                component: CNavItem,
+                name: 'Technical Document - XeniPayment',
+                to: '/base/technical-document-xenipayment',
+              },
+            ],
+          },
+          {
+            component: CNavItem,
+            name: 'Commissions',
+            to: '/base/commissions',
+          },
+        ],
+      },
+    ],
+  },
+
   // {
   //   component: CNavGroup,
   //   name: 'Product Architecture - XeniApp',
@@ -1743,11 +2245,11 @@ const _nav = [
   //   component: CNavItem,
   //   name: 'Widgets',
   //   to: '/widgets',
-    // icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    // badge: {
-    //   color: 'info',
-    //   text: 'NEW',
-    // },
+  // icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
+  // badge: {
+  //   color: 'info',
+  //   text: 'NEW',
+  // },
   // },
   // {
   //   component: CNavTitle,
